@@ -11,7 +11,7 @@
         width: 28px;
         height: 3px;
         margin: 0 0 5px 0;
-        background: pink;
+        background: set-text-color($primary-color);
         @include easeOut;
     }
 
@@ -38,29 +38,19 @@
     position: fixed;
     top:0;
     width:100%;
-    opacity: 0.9;
     visibility: hidden;
     
     &.show {
         visibility: visible;
     }
     
-    &-branding, 
     &-nav {
         display: flex;
-        flex-flow: column wrap;
-        align-items: center;
-        justify-content: center;
-        float: left;
-        width: 50%;
-        height: 100vh;
-        overflow:hidden;
-    }
-    
-    &-nav {
-        margin: 0;
         padding: 0;
-        background: darken($primary-color, 5);
+        overflow:hidden;
+        margin: .65rem 20vw .65rem;
+        
+        border-bottom: 5px solid #6b6b6b;
         list-style: none;
         transform: translate3d(0, -100%, 0);
         @include easeOut;
@@ -70,31 +60,9 @@
             transform: translate3d(0,0,0);
         }
     }
-    
-    &-branding {
-        background: $primary-color;
-        transform: translate3d(0, 100%, 0);
-        @include easeOut;
-        
-        
-        &.show {
-            //slide from bottom
-            transform: translate3d(0,0,0);
-        }
-        
-        .portrait {
-            width: 250px;
-            height: 250px;
-            background: url(/img/Chloe%20Burbank.png);
-            opacity: 1;
-            background-size: cover;
-            border-radius: 50%;
-            border: solid 3px $secondary-color;
-        
-        }
-    }
-    
+ 
     .nav-item {
+        
         transform: translate3d(600px, 0, 0);
         @include easeOut;
         
@@ -104,30 +72,77 @@
             
         }
         &.current > a{
-            color: $secondary-color;
+            //#A3F4A3
+            color: white !important;
+            font-style: italic;
+            background: linear-gradient(to right, 
+     $secondary-color 20%, #80CBFB 20% 40%, $secondary-color 40% 60%, #80CBFB 60% 80%, $secondary-color 80%);
+            /*border-top: dashed #006400;
+            border-bottom: dashed #006400;*/
+            border-radius: 2px;
+            
+            &:hover {
+                color: $secondary-color !important;
+                background: linear-gradient(to right, 
+     #000 20%, #000 20% 40%, #000 40% 60%, #000 60% 80%, #000 80%);
+                
+            }
         }
+        
+        
+        .fa-stack{
+            transform: scale(1.2) translateX(1px) translateY(-5.5px);
+        }    
+        .fa-sun{
+            transition: opacity 1s, transform 1s;
+			transform: rotate(-180deg) scale(.5);
+			opacity: 0;
+            @include easeOut;
+            &:hover {
+                color: $secondary-color !important;
+                
+            }
+            
+		}
+        .fa-moon{
+            transition: opacity 1s, transform 1s;
+        }
+        
+        .rotate{
+			transform: rotate(180deg) scale(.5);
+			opacity: 0;
+        }
+        
+        .unrotate{
+			transform: rotate(0deg) scale(1);
+			opacity: 1;
+        }
+        
+        
+        
     }
     
     .nav-link{
         display: inline-block;
         position: relative;
-        font-size: 30px;
-        text-transform: uppercase;
-        padding: 1rem 0;
+        font-size: 20px;
+        margin-top: 3px;
+        margin-bottom: -3px;
+        padding: 0 .9rem;
         font-weight: 300;
-        color: white;
+        color: set-text-color($primary-color);
         text-decoration: none;
         @include easeOut;
         
-        &:hover{
-            color: $secondary-color;
+        &:hover {
+            color: $secondary-color !important;
         }
     }
 }
 
 //delay each nav item slide by 0.1
 
-@for $x from 1 through 4 {
+@for $x from 1 through 3 {
     .nav-item:nth-child(#{$x}){
         transition-delay: $x * 0.1s;
     }

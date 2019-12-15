@@ -1,18 +1,18 @@
-$primary-color: #444;
-$secondary-color: #00FF49;
+$primary-color: #2D2D30 ;
+$primary-color2: #fff;
+$secondary-color: #ffc0cb;//#f5cedb;  //this was the first
+$font-color: #D3D2CF;
 $show-home-image: true;
-$home-img: url(/img/wow.png);
 $background-opacity:0.5;
+
 @mixin easeOut {
     transition: all 0.8s ease-out;
 }
 
-@mixin background {
+/*@mixin background {
     @if $show-home-image {
         &#bg-img {
-            background: $home-img;
-            background-attachment: fixed;
-            background-size: cover;
+            background-color: #2D2D30;
             
             &:after {
                 content:'';
@@ -25,5 +25,40 @@ $background-opacity:0.5;
                 background: rgba($primary-color, $background-opacity);
             }
         }
+    }
+}*/
+
+//media query mixins
+
+@mixin mediaSm{
+    @media screen and (max-width: 500px) {
+        @content;
+    }
+}
+
+@mixin mediaMd{
+    @media screen and (max-width: 768px) {
+        @content;
+    }
+}
+
+@mixin mediaLg{
+    @media screen and (min-width: 769px) and (max-width: 1170px) {
+        @content;
+    }
+}
+
+@mixin mediaXLg{
+    @media screen and (min-width: 1171px) {
+        @content;
+    }
+}
+
+//set text color
+@function set-text-color($color) {
+    @if (lightness($color) > 40){
+        @return #000;
+    } @else {
+        @return #D3D2CF;
     }
 }
