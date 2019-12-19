@@ -78,6 +78,7 @@ else if(sessionStorage.getItem('d') === 'light'){
         a[i].style.color = '#000';
     }
     day = true;
+    
 }
 
 //light dark toggle button
