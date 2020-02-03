@@ -1,4 +1,4 @@
-$primary-color: #2D2D30 ;
+$primary-color: #2D2D30;
 $primary-color2: #fff;
 $secondary-color: #ffc0cb;//#f5cedb;  //this was the first
 $font-color: #D3D2CF;
@@ -57,8 +57,8 @@ $background-opacity:0.5;
 //set text color
 @function set-text-color($color) {
     @if (lightness($color) > 40){
-        @return #000;
+        @return #000000;
     } @else {
-        @return #D3D2CF;
+        @return #ffffff;
     }
 }

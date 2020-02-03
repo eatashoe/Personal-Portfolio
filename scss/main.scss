@@ -7,13 +7,47 @@
 }
 
 html, body {
-    @include easeOut;
-    background: $primary-color;
+    
+    background-color: #000000;
+    background: -webkit-linear-gradient(300deg, #000000 0%, #0f0b36 20%, #240b36 40%, #ff5acd 60%, #fd9a97 80%, #fbda61 100%);
+    background: -moz-linear-gradient(300deg, #000000 0%, #0f0b36 20%, #240b36 40%, #ff5acd 60%, #fd9a97 80%, #fbda61 100%);
+    background: -o-linear-gradient(300deg, #000000 0%, #0f0b36 20%, #240b36 40%, #ff5acd 60%, #fd9a97 80%, #fbda61 100%);
+    background: linear-gradient(150deg, #000000 0%, #0f0b36 20%, #240b36 40%, #ff5acd 60%, #fd9a97 80%, #fbda61 100%);
+    background-size: 250% 250%;
+    
     color: set-text-color($primary-color);
     margin: 0;
     height: 100%;
     font-family: Roboto, sans-serif;
+    @include easeOut;
 
+    .day{
+        animation: nightToDay;
+        animation-duration: 2s;
+        
+        -webkit-animation: nightToDay;
+        -webkit-animation-duration: 2s;
+        
+        -moz-animation: nightToDay;
+        -moz-animation-duration: 2s;
+        
+        -o-animation: nightToDay;
+        -o-animation-duration: 2s;
+        
+    }
+    .night{
+        animation: dayToNight;
+        animation-duration: 2s;
+        
+        -webkit-animation: dayToNight;
+        -webkit-animation-duration: 2s;
+        
+        -moz-animation: dayToNight;
+        -moz-animation-duration: 2s;
+        
+        -o-animation: dayToNight;
+        -o-animation-duration: 2s;
+    }
 }
 
 //heading
@@ -51,7 +85,7 @@ main {
         transform: scale(.7);
         
             
-        .github{ color: #000000 !important;}
+        //.github{ color: #ffffff !important;}
         .linkedin{ color: #0e76a8 !important;}
         
         a {
@@ -79,15 +113,86 @@ footer{
 }
 
 #gameScreen{
-    visibility: hidden;
+    visibility:hidden;
     z-index: 2;
 //    border: dotted gold 1px;
 }
 
 #stars{
-    
     position: absolute;
     display: block;
-
-
 }
+
+@keyframes nightToDay{
+    0% {
+        background-position: 0% 0%
+    }
+    100% {
+        background-position: 100% 95%
+    }
+}
+
+@keyframes dayToNight{
+    0% {
+        background-position: 100% 95%
+    }
+    100% {
+        background-position: 0% 0%
+    }
+}
+
+@-webkit-keyframes nightToDay{
+    0% {
+        background-position: 0% 0%
+    }
+    100% {
+        background-position: 100% 95%
+    }
+}
+
+@-webkit-keyframes dayToNight{
+    0% {
+        background-position: 100% 95%
+    }
+    100% {
+        background-position: 0% 0%
+    }
+}
+
+@-moz-keyframes nightToDay{
+    0% {
+        background-position: 0% 0%
+    }
+    100% {
+        background-position: 100% 95%
+    }
+}
+
+@-moz-keyframes dayToNight{
+    0% {
+        background-position: 100% 95%
+    }
+    100% {
+        background-position: 0% 0%
+    }
+}
+
+@-o-keyframes nightToDay{
+    0% {
+        background-position: 0% 0%
+    }
+    100% {
+        background-position: 100% 95%
+    }
+}
+
+@-o-keyframes dayToNight{
+    0% {
+        background-position: 100% 95%
+    }
+    100% {
+        background-position: 0% 0%
+    }
+}
+
+

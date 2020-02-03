@@ -49,13 +49,46 @@ function drawStars(){
 }
 
 
-
+let active = true;
 function draw()
 {
-    // Clear entire screen
-    ctx.clearRect(0, 0, stars.width, stars.height);
-
-    drawStars();
-    requestAnimationFrame(draw);
+    if(active){
+        if(sessionStorage.getItem('d') === null || sessionStorage.getItem('d') === 'dark'){
+            // Clear entire screen
+            ctx.clearRect(0, 0, stars.width, stars.height);
+            drawStars();
+            requestAnimationFrame(draw);
+        }
+    }
 }
-draw();
+
+draw(); 
+
+sun.addEventListener('click', ()=>{
+    if(day){
+        setTimeout(function() {
+            ctx.clearRect(0, 0, stars.width, stars.height);
+        active = false;
+        },500);
+    }
+    else{
+        setTimeout(function(){
+        active = true;
+        draw();   
+        },500);
+    }
+});
+moon.addEventListener('click', ()=>{
+    if(day){
+        setTimeout(function() {
+            ctx.clearRect(0, 0, stars.width, stars.height);
+        active = false;
+        },500);
+    }
+    else{
+        setTimeout(function(){
+        active = true;
+        draw();   
+        },500);
+    }
+});
