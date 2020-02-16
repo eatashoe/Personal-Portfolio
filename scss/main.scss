@@ -19,6 +19,7 @@ html, body {
     margin: 0;
     height: 100%;
     font-family: Roboto, sans-serif;
+    overflow-y: visible;
     @include easeOut;
 
     .day{
@@ -194,5 +195,59 @@ footer{
         background-position: 0% 0%
     }
 }
-
-
+.projectBox{
+    overflow-y: scroll;
+    margin-left: 3vw;
+    margin-right: 3vw;
+    margin-top: 8vh;
+    display: block;
+    width: 94vw;
+    height: 89vh;
+    overflow-y: scroll;
+}
+.cards{
+    display: flex;
+}
+.projects{
+    height: 35vh;
+    background: rgba(255, 255, 255, .1);
+    border-radius: 5px;
+}
+.card{ 
+    margin: 8% 5% 8%;
+    width: 90%;
+    height: 85%;
+    align-content:center;
+    text-align: center;
+    h3{
+        font-size: 2rem;
+        font-weight: 500;
+    }
+    p{
+        font-weight: 300;
+        line-height: 1.5;
+    }
+    .projBtns{
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 5%;
+    width: 80%;
+    height: 25%;
+    display: flex;
+    justify-content: center;
+        div{
+            height: 65%;
+            border: white solid 1px;
+            border-radius: 10px;
+            padding: 10px 5px 0px; 
+            &:hover{
+                color: black;
+                background: white;
+                transition: all .35s ease-out;
+            }
+        }
+    }
+    .try{
+        margin-right: 5px;
+    }
+}

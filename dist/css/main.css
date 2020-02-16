@@ -65,12 +65,12 @@
     margin: .65rem 20vw .65rem;
     list-style: none;
     transform: translate3d(0, -100%, 0);
-    transition: all 0.8s ease-out; }
+    transition: all 0.6s ease-out; }
     .menu-nav.show {
       transform: translate3d(0, 0, 0); }
   .menu .nav-item {
     transform: translate3d(600px, 0, 0);
-    transition: all 0.8s ease-out; }
+    transition: all 0.6s ease-out; }
     .menu .nav-item.show {
       transform: translate3d(0, 0, 0); }
     .menu .nav-item.current > a {
@@ -89,7 +89,7 @@
       transition: opacity 1s, transform 1s;
       transform: rotate(-180deg) scale(0.5);
       opacity: 0;
-      transition: all 0.8s ease-out; }
+      transition: all 0.6s ease-out; }
       .menu .nav-item .fa-sun:hover {
         color: #ffc0cb !important; }
     .menu .nav-item .fa-moon {
@@ -110,7 +110,7 @@
     font-weight: 300;
     color: #ffffff;
     text-decoration: none;
-    transition: all 0.8s ease-out; }
+    transition: all 0.6s ease-out; }
     .menu .nav-link:hover {
       color: #ffc0cb !important; }
 
@@ -124,6 +124,11 @@
   transition-delay: 0.3s; }
 
 @media screen and (min-width: 1171px) {
+  .cards {
+    margin: 0 20% 0; }
+  .projects {
+    margin: 5px;
+    width: 500px; }
   .menu-btn {
     visibility: hidden; }
   .menu {
@@ -134,6 +139,11 @@
       transform: translate3d(-600px, 0, 0); } }
 
 @media screen and (min-width: 769px) and (max-width: 1170px) {
+  .cards {
+    margin: 0 5vw 0; }
+  .projects {
+    width: 40vw;
+    margin: 5px; }
   .menu-btn {
     visibility: hidden; }
   .menu {
@@ -144,6 +154,12 @@
       transform: translate3d(-600px, 0, 0); } }
 
 @media screen and (max-width: 768px) {
+  .cards {
+    flex-direction: column;
+    align-items: center; }
+  .projects {
+    width: 70vw;
+    margin: 5px; }
   /* main{
         align-items: center;
         text-align: center;
@@ -179,6 +195,12 @@
       transform: translate3d(-600px, 0, 0); } }
 
 @media screen and (max-width: 500px) {
+  .cards {
+    flex-direction: column;
+    align-items: center; }
+  .projects {
+    width: 100%;
+    margin: 5px; }
   .menu-btn {
     visibility: hidden; }
   .menu {
@@ -210,7 +232,8 @@ html, body {
   margin: 0;
   height: 100%;
   font-family: Roboto, sans-serif;
-  transition: all 0.8s ease-out; }
+  overflow-y: visible;
+  transition: all 0.6s ease-out; }
   html .day, body .day {
     animation: nightToDay;
     animation-duration: 2s;
@@ -243,7 +266,7 @@ h3 {
 a {
   color: #ffffff;
   text-decoration: none;
-  transition: all 0.8s ease-out; }
+  transition: all 0.6s ease-out; }
 
 header {
   position: fixed;
@@ -326,3 +349,53 @@ footer {
     background-position: 100% 95%; }
   100% {
     background-position: 0% 0%; } }
+
+.projectBox {
+  overflow-y: scroll;
+  margin-left: 3vw;
+  margin-right: 3vw;
+  margin-top: 8vh;
+  display: block;
+  width: 94vw;
+  height: 89vh;
+  overflow-y: scroll; }
+
+.cards {
+  display: flex; }
+
+.projects {
+  height: 35vh;
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 5px; }
+
+.card {
+  margin: 8% 5% 8%;
+  width: 90%;
+  height: 85%;
+  align-content: center;
+  text-align: center; }
+  .card h3 {
+    font-size: 2rem;
+    font-weight: 500; }
+  .card p {
+    font-weight: 300;
+    line-height: 1.5; }
+  .card .projBtns {
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 5%;
+    width: 80%;
+    height: 25%;
+    display: flex;
+    justify-content: center; }
+    .card .projBtns div {
+      height: 65%;
+      border: white solid 1px;
+      border-radius: 10px;
+      padding: 10px 5px 0px; }
+      .card .projBtns div:hover {
+        color: black;
+        background: white;
+        transition: all .35s ease-out; }
+  .card .try {
+    margin-right: 5px; }
