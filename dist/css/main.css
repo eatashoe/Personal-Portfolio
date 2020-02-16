@@ -128,6 +128,7 @@
     margin: 0 20% 0; }
   .projects {
     margin: 5px;
+    height: 300px;
     width: 500px; }
   .menu-btn {
     visibility: hidden; }
@@ -361,7 +362,8 @@ footer {
   overflow-y: scroll; }
 
 .cards {
-  display: flex; }
+  display: flex;
+  justify-content: center; }
 
 .projects {
   height: 35vh;
@@ -392,7 +394,8 @@ footer {
       height: 65%;
       border: white solid 1px;
       border-radius: 10px;
-      padding: 10px 5px 0px; }
+      text-align: center;
+      padding: 11px 5px 0px; }
       .card .projBtns div:hover {
         color: black;
         background: white;
