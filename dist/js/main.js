@@ -12,6 +12,8 @@ const moon = document.querySelector('.fa-moon');
 const sun = document.querySelector('.fa-sun');
 const background = document.querySelector('body');
 const a = document.querySelectorAll('a');
+const beyond = document.querySelector('.beyond');
+const tryBtn = document.querySelectorAll('.try');
 
 /*// initial state of menu
 let showMenu = false;
@@ -59,6 +61,13 @@ if(sessionStorage.getItem('d') === 'dark') {
     background.style.backgroundPosition = '0% 0%';
     background.style.color = '#fff';
     menuNav.style.borderBottomColor = '#fff';
+    if(beyond !== null){
+        beyond.style.filter = 'invert(100%)';
+        for(i = 0; i < tryBtn.length; i++){
+            tryBtn[i].style.borderColor = '#fff';
+            tryBtn[i].classList.remove('change');
+        }
+    }
     
     for(i = 0; i < a.length; i++){
         a[i].style.color = '#fff';
@@ -73,6 +82,14 @@ else if(sessionStorage.getItem('d') === 'light'){
     background.style.backgroundPosition = '100% 95%';
     background.style.color = '#000';
     menuNav.style.borderBottomColor = '#000';
+    if(beyond !== null){
+        beyond.style.filter = 'invert(0%)';
+        for(i = 0; i < tryBtn.length; i++){
+            tryBtn[i].style.borderColor = '#000';
+            tryBtn[i].classList.add('change');
+        }
+    }
+    
    for(i = 0; i < a.length; i++){
         a[i].style.color = '#000';
     }
@@ -95,6 +112,13 @@ function dayNightToggle(){
         background.classList.remove('night');
         background.style.color = '#000';
         menuNav.style.borderBottomColor = '#000';
+        if(beyond !== null){
+            beyond.style.filter = 'invert(0%)';
+            for(i = 0; i < tryBtn.length; i++){
+                tryBtn[i].style.borderColor = '#000';
+                tryBtn[i].classList.add('change');
+            }
+        }
         
        for(i = 0; i < a.length; i++){
             a[i].style.color = '#000';
@@ -114,6 +138,13 @@ function dayNightToggle(){
         background.classList.remove('day');
         background.style.color = '#fff';
         menuNav.style.borderBottomColor = '#fff';
+        if(beyond !== null){
+            beyond.style.filter = 'invert(100%)';
+            for(i = 0; i < tryBtn.length; i++){
+                tryBtn[i].style.borderColor = '#fff';
+                tryBtn[i].classList.remove('change');
+            }
+        }
         
         for(i = 0; i < a.length; i++){
             a[i].style.color = '#fff';

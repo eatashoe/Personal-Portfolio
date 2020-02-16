@@ -389,14 +389,20 @@ footer {
     height: 25%;
     display: flex;
     justify-content: center; }
-    .card .projBtns div {
+    .card .projBtns .try {
       border: white solid 1px;
       border-radius: 10px;
       text-align: center;
-      padding: 8px 5px 8px; }
-      .card .projBtns div:hover {
+      padding: 8px 5px 8px;
+      margin-right: 5px; }
+      .card .projBtns .try:hover {
         color: black;
         background: white;
         transition: all .35s ease-out; }
-  .card .try {
-    margin-right: 5px; }
+    .card .projBtns .change:hover {
+      color: white;
+      background: black; }
+
+.beyond {
+  filter: invert(100%);
+  transition: all 0.6s ease-out; }

@@ -235,19 +235,27 @@ footer{
     height: 25%;
     display: flex;
     justify-content: center;
-        div{
+        .try{
             border: white solid 1px;
             border-radius: 10px;
             text-align: center;
             padding: 8px 5px 8px; 
+            margin-right: 5px;
             &:hover{
                 color: black;
                 background: white;
                 transition: all .35s ease-out;
             }
         }
+        .change{
+            &:hover{
+                color: white;
+                background: black;
+            }
+        }
     }
-    .try{
-        margin-right: 5px;
-    }
+}
+.beyond{
+    filter: invert(100%);
+    @include easeOut();
 }
