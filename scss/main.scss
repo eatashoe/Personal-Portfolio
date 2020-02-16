@@ -210,7 +210,6 @@ footer{
     justify-content: center;
 }
 .projects{
-    height: 35vh;
     background: rgba(255, 255, 255, .1);
     border-radius: 5px;
 }
@@ -237,11 +236,10 @@ footer{
     display: flex;
     justify-content: center;
         div{
-            height: 65%;
             border: white solid 1px;
             border-radius: 10px;
             text-align: center;
-            padding: 11px 5px 0px; 
+            padding: 8px 5px 8px; 
             &:hover{
                 color: black;
                 background: white;
