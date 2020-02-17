@@ -352,14 +352,21 @@ footer {
     background-position: 0% 0%; } }
 
 .projectBox {
-  overflow-y: scroll;
   margin-left: 3vw;
   margin-right: 3vw;
   margin-top: 8vh;
   display: block;
   width: 94vw;
   height: 89vh;
-  overflow-y: scroll; }
+  overflow-y: scroll;
+  scrollbar-width: none;
+  /* Firefox */
+  -ms-overflow-style: none;
+  /* Internet Explorer 10+ */ }
+
+.projectBox::-webkit-scrollbar {
+  width: 0;
+  height: 0; }
 
 .cards {
   display: flex;

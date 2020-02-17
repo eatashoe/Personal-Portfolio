@@ -119,11 +119,13 @@ footer{
 //    border: dotted gold 1px;
 }
 
+//stars in background
 #stars{
     position: absolute;
     display: block;
 }
 
+//day night animations for different media types
 @keyframes nightToDay{
     0% {
         background-position: 0% 0%
@@ -195,8 +197,9 @@ footer{
         background-position: 0% 0%
     }
 }
+
+//project page
 .projectBox{
-    overflow-y: scroll;
     margin-left: 3vw;
     margin-right: 3vw;
     margin-top: 8vh;
@@ -204,6 +207,12 @@ footer{
     width: 94vw;
     height: 89vh;
     overflow-y: scroll;
+    scrollbar-width: none; /* Firefox */
+    -ms-overflow-style: none;  /* Internet Explorer 10+ */
+}
+.projectBox::-webkit-scrollbar{
+    width: 0;
+    height: 0;
 }
 .cards{
     display: flex;
@@ -255,6 +264,8 @@ footer{
         }
     }
 }
+
+//logo
 .beyond{
     filter: invert(100%);
     @include easeOut();
