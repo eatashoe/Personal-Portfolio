@@ -295,7 +295,7 @@ main {
 footer {
   position: sticky; }
 
-#gameScreen {
+#game {
   visibility: hidden;
   z-index: 2; }
 
