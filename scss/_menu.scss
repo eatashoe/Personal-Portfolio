@@ -67,11 +67,11 @@
         transform: translate3d(600px, 0, 0);
         @include easeOut;
         
-        &.show {
+ /*     &.show {
             //slide from right
             transform: translate3d(0,0,0);
             
-        }
+        }*/
         &.current > a{
             //#A3F4A3
             color: white !important;
