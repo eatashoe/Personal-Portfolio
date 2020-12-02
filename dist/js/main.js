@@ -15,36 +15,6 @@ const a = document.querySelectorAll('a');
 const beyond = document.querySelector('.beyond');
 const tryBtn = document.querySelectorAll('.try');
 
-/*// initial state of menu
-let showMenu = false;
-
-
-menuBtn.addEventListener('click', toggleMenu);
-
-
-
-function toggleMenu(){
-
-    if(!showMenu){
-        menuBtn.classList.add('close');
-        menu.classList.add('show');
-        menuNav.classList.add('show');
-        navItem.forEach(item => item.classList.add('show'));
-        
-        //set menu state
-        
-        showMenu = true;
-    } else {
-        menuBtn.classList.remove('close');
-        menu.classList.remove('show');
-        menuNav.classList.remove('show');
-        navItem.forEach(item => item.classList.remove('show'));
-        
-        //set menu state
-        
-        showMenu = false;
-    }
-}*/
 
 //Changes to light or dark mode
 

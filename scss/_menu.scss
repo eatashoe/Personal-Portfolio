@@ -1,85 +1,27 @@
-//menu
-/*
-.menu-btn {
-    position: absolute;
-    z-index: 3;
-    right: 35px;
-    top: 35px;
-    cursor: pointer;
-    @include easeOut;
-
-    .btn-line {
-        width: 28px;
-        height: 3px;
-        margin: 0 0 5px 0;
-        background: set-text-color($primary-color);
-        @include easeOut;
-    }
-
-    //rotate into x 
-    &.close {
-        transform: rotate(180deg);
-            
-        .btn-line {
-            
-            &:nth-child(1){
-                transform: rotate(45deg) translate(5px, 5px);
-            }
-            &:nth-child(2){
-                opacity: 0;
-            }
-            &:nth-child(3){
-                transform: rotate(-45deg) translate(6.5px,-6.5px);
-            }
-        }
-    }
-}*/
-//menu-overlay
 .menu {
     position: fixed;
     top:0;
     width:100%;
-    visibility: hidden;
-    
-    &.show {
-        visibility: visible;
-    }
     
     &-nav {
         display: flex;
         padding: 0;
         overflow:hidden;
         margin: .65rem 20vw .65rem;
-        
-        //border-bottom: 5px solid #fff; 
         list-style: none;
-        transform: translate3d(0, -100%, 0);
+
         @include easeOut;
-        
-        &.show {
-            //slide from top
-            transform: translate3d(0,0,0);
-        }
+
     }
  
     .nav-item {
-        
-        transform: translate3d(600px, 0, 0);
-        @include easeOut;
-        
- /*     &.show {
-            //slide from right
-            transform: translate3d(0,0,0);
-            
-        }*/
+        font-family: 'Roboto Mono', monospace;
         &.current > a{
             //#A3F4A3
             color: white !important;
             font-style: italic;
             background: linear-gradient(to right, 
      $secondary-color 20%, #80CBFB 20% 40%, $secondary-color 40% 60%, #80CBFB 60% 80%, $secondary-color 80%);
-            /*border-top: dashed #006400;
-            border-bottom: dashed #006400;*/
             border-radius: 2px;
             
             &:hover {
@@ -89,7 +31,6 @@
                 
             }
         }
-        
         
         .fa-stack{
             transform: scale(1.2) translateX(1px) translateY(-5.5px);
@@ -142,8 +83,8 @@
 
 //delay each nav item slide by 0.1
 
-@for $x from 1 through 3 {
-    .nav-item:nth-child(#{$x}){
-        transition-delay: $x * 0.1s;
-    }
-}
+//@for $x from 1 through 3 {
+//    .nav-item:nth-child(#{$x}){
+//        transition-delay: $x * 0.1s;
+//    }
+//}

@@ -17,7 +17,7 @@ var spaceship =
     position:
     {
         x: bodyW - 50,
-        y: bodyH - 50
+        y: bodyH - 5 0
     },
     velocity:
     {

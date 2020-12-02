@@ -1,87 +1,20 @@
-/*@mixin background {
-    @if $show-home-image {
-        &#bg-img {
-            background-color: #2D2D30;
-            
-            &:after {
-                content:'';
-                position: absolute;
-                top: 0;
-                right: 0;
-                width: 100%;
-                height: 100%;
-                z-index: -1;
-                background: rgba($primary-color, $background-opacity);
-            }
-        }
-    }
-}*/
-/*
-.menu-btn {
-    position: absolute;
-    z-index: 3;
-    right: 35px;
-    top: 35px;
-    cursor: pointer;
-    @include easeOut;
-
-    .btn-line {
-        width: 28px;
-        height: 3px;
-        margin: 0 0 5px 0;
-        background: set-text-color($primary-color);
-        @include easeOut;
-    }
-
-    //rotate into x 
-    &.close {
-        transform: rotate(180deg);
-            
-        .btn-line {
-            
-            &:nth-child(1){
-                transform: rotate(45deg) translate(5px, 5px);
-            }
-            &:nth-child(2){
-                opacity: 0;
-            }
-            &:nth-child(3){
-                transform: rotate(-45deg) translate(6.5px,-6.5px);
-            }
-        }
-    }
-}*/
 .menu {
   position: fixed;
   top: 0;
-  width: 100%;
-  visibility: hidden; }
-  .menu.show {
-    visibility: visible; }
+  width: 100%; }
   .menu-nav {
     display: flex;
     padding: 0;
     overflow: hidden;
     margin: .65rem 20vw .65rem;
     list-style: none;
-    transform: translate3d(0, -100%, 0);
-    transition: all 0.6s ease-out; }
-    .menu-nav.show {
-      transform: translate3d(0, 0, 0); }
+    transition: all 0.5s ease-out; }
   .menu .nav-item {
-    transform: translate3d(600px, 0, 0);
-    transition: all 0.6s ease-out;
-    /*     &.show {
-            //slide from right
-            transform: translate3d(0,0,0);
-            
-        }*/ }
+    font-family: 'Roboto Mono', monospace; }
     .menu .nav-item.current > a {
       color: white !important;
       font-style: italic;
       background: linear-gradient(to right, #ffc0cb 20%, #80CBFB 20% 40%, #ffc0cb 40% 60%, #80CBFB 60% 80%, #ffc0cb 80%);
-      /*border-top: dashed #006400;
-            border-bottom: dashed #006400;*/
       border-radius: 2px; }
       .menu .nav-item.current > a:hover {
         color: #ffc0cb !important;
@@ -92,7 +25,7 @@
       transition: opacity 1s, transform 1s;
       transform: rotate(-180deg) scale(0.5);
       opacity: 0;
-      transition: all 0.6s ease-out; }
+      transition: all 0.5s ease-out; }
       .menu .nav-item .fa-sun:hover {
         color: #ffc0cb !important; }
     .menu .nav-item .fa-moon {
@@ -113,18 +46,9 @@
     font-weight: 300;
     color: #ffffff;
     text-decoration: none;
-    transition: all 0.6s ease-out; }
+    transition: all 0.5s ease-out; }
     .menu .nav-link:hover {
       color: #ffc0cb !important; }
-
-.nav-item:nth-child(1) {
-  transition-delay: 0.1s; }
-
-.nav-item:nth-child(2) {
-  transition-delay: 0.2s; }
-
-.nav-item:nth-child(3) {
-  transition-delay: 0.3s; }
 
 @media screen and (min-width: 1171px) {
   .cards {
@@ -132,30 +56,14 @@
   .projects {
     margin: 5px;
     height: 300px;
-    width: 500px; }
-  .menu-btn {
-    visibility: hidden; }
-  .menu {
-    visibility: visible; }
-    .menu-nav {
-      transform: translate3d(0, 0, 0); }
-    .menu .nav-link {
-      transform: translate3d(-600px, 0, 0); } }
+    width: 500px; } }
 
 @media screen and (min-width: 769px) and (max-width: 1170px) {
   .cards {
     margin: 0 5vw 0; }
   .projects {
     width: 40vw;
-    margin: 5px; }
-  .menu-btn {
-    visibility: hidden; }
-  .menu {
-    visibility: visible; }
-    .menu-nav {
-      transform: translate3d(0, 0, 0); }
-    .menu .nav-link {
-      transform: translate3d(-600px, 0, 0); } }
+    margin: 5px; } }
 
 @media screen and (max-width: 768px) {
   .cards {
@@ -164,39 +72,8 @@
   .projects {
     width: 70vw;
     margin: 5px; }
-  /* main{
-        align-items: center;
-        text-align: center;
-        
-        .lg-heading{
-            line-height: 1;
-            margin-bottom: 1rem;
-            
-        }
-    }
-    
-    ul.menu-nav,{
-        
-        &.show{
-            transform: translate3d(0,0,0);
-        }
-    }
-    
-    .menu-nav{
-        transform: translate3d(100%, 0 , 0);
-        font-size: 24px;
-    }
-    
-}*/
-  .menu-btn {
-    visibility: hidden; }
-  .menu {
-    visibility: visible; }
-    .menu-nav {
-      transform: translate3d(0, 0, 0);
-      margin: .65rem 0 .65rem; }
-    .menu .nav-link {
-      transform: translate3d(-600px, 0, 0); } }
+  .menu-nav {
+    margin: .65rem 0 .65rem; } }
 
 @media screen and (max-width: 500px) {
   .cards {
@@ -205,16 +82,10 @@
   .projects {
     width: 100%;
     margin: 5px; }
-  .menu-btn {
-    visibility: hidden; }
-  .menu {
-    visibility: visible; }
-    .menu-nav {
-      transform: translate3d(0, 0, 0);
-      margin: .65rem 0 .65rem; }
-    .menu .nav-link {
-      font-size: 18px;
-      transform: translate3d(-600px, 0, 0); }
+  .menu-nav {
+    margin: .65rem 0 .65rem; }
+  .menu .nav-link {
+    font-size: 18px; }
   main#home h1 {
     margin-top: 10vh;
     font-size: 1.8rem; }
@@ -237,7 +108,7 @@ html, body {
   height: 100%;
   font-family: Roboto, sans-serif;
   overflow-y: visible;
-  transition: all 0.6s ease-out; }
+  transition: all 0.5s ease-out; }
   html .day, body .day {
     animation: nightToDay;
     animation-duration: 2s;
@@ -265,12 +136,13 @@ h3 {
   h1.heading,
   h2.heading,
   h3.heading {
+    font-family: 'Roboto Mono', monospace;
     font-size: 2.1rem; }
 
 a {
   color: #ffffff;
   text-decoration: none;
-  transition: all 0.6s ease-out; }
+  transition: all 0.5s ease-out; }
 
 header {
   position: fixed;
@@ -282,10 +154,17 @@ main {
   text-align: center;
   padding: 4rem;
   height: 100%; }
+  main .face {
+    width: 4em;
+    height: 4em;
+    border-radius: 50%;
+    overflow: hidden;
+    margin: 0 auto; }
+    main .face img {
+      margin: -90% -57%;
+      width: 220%; }
   main .icons {
     transform: scale(0.7); }
-    main .icons .linkedin {
-      color: #0e76a8 !important; }
     main .icons a {
       padding: 0.4rem; }
       main .icons a:hover {
@@ -386,10 +265,10 @@ footer {
   align-content: center;
   text-align: center; }
   .card h3 {
-    font-size: 2rem;
-    font-weight: 500; }
+    font-family: 'Roboto Mono', monospace;
+    font-size: 2rem; }
   .card p {
-    font-weight: 300;
+    font-weight: 100;
     line-height: 1.5; }
   .card .projBtns {
     margin-left: auto;
@@ -398,7 +277,8 @@ footer {
     width: 80%;
     height: 25%;
     display: flex;
-    justify-content: center; }
+    justify-content: center;
+    font-family: 'Roboto', sans-serif; }
     .card .projBtns .try {
       border: white solid 1px;
       border-radius: 10px;
@@ -415,4 +295,4 @@ footer {
 
 .beyond {
   filter: invert(100%);
-  transition: all 0.6s ease-out; }
+  transition: all 0.5s ease-out; }
